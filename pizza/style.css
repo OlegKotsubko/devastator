@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+body {
+    background-image: url(img/repeat_bg.jpg);
+    font-family: sans-serif;
+    background-repeat: repeat-y;
+    
+}
+li, img{
+    cursor: pointer;
+}
+.imgPizza img {
+    cursor: default !important;
+}
+.container {
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 3%;
+    border: solid 1px #a39b9b; /* Параметры рамки вокруг */
+    border-radius: 7px;
+    padding: 10px; /* Поля вокруг текста */
+    background-color: #fff;
+    /* BOX SHADOW */
+/* webkit */
+-webkit-box-shadow:  0px 0px 0px 0px rgba(87, 182, 224, .6),  0px 0px 33px 16px rgb(0,0,0);
+/* Mozilla */
+-moz-box-shadow:  0px 0px 0px 0px rgba(87, 182, 224, .6),  0px 0px 33px 16px rgb(0,0,0);
+box-shadow:  0px 0px 0px 0px rgba(87, 182, 224, .6),  0px 0px 33px 16px rgb(0,0,0);
+/* IE <9.0 HACK (SUPPORTS ONLY ONE SHADOW) */
+filter: progid:DXImageTransform.Microsoft.dropshadow(offX=0, offY=0, color=#000000);
+
+}
+.wrap>div{
+    width: 50%;
+	float: left;
+}
+.imgPizza {
+    border-bottom: 1px solid #dedede;
+}
+.mainMenu {
+    height: 499px;
+    color: #7a7575;
+    border-bottom: 1px solid #dedede;
+    
+}
+.mainMenu>div {
+    margin-top: 6%;
+}
+.header {
+    margin-bottom: 2%;
+    color: #262323 !important;
+}
+.dough {
+    height: 80px;
+}
+.dough img {
+    margin: -37px -86px -2px 121px;
+    filter: alpha(Opacity=50);
+    opacity: 0.5;
+}
+div.dough > img.active {
+    margin: -37px -86px -2px 121px;
+    filter: alpha(Opacity=100);
+    opacity: 1; 
+}
+.size ul{
+    height: 80px;
+    margin-left: 100px;
+}
+.size ul>li{
+    float: left;
+    display: block;
+    margin: 0 20px;
+}
+ span>b{
+    display: table-cell;
+    height: 20px;
+}
+.size li.xxl {
+    background: url(img/pizza-size-large.png);
+    width: 60px;
+    height: 65px;
+}
+.size li.xl {
+    background: url(img/pizza-size-large.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    width: 62px;
+    height: 60px;
+}
+.size li.x {
+    background: url(img/pizza-size-large.png);
+    background-size: 82%;
+    background-repeat: no-repeat;
+    width: 62px;
+    height: 55px;
+}
+.sauce ul {
+    height: 80px;
+    margin-left: 100px;
+}
+.sauce ul>li{
+    float: left;
+    display: block;
+    margin: 0 10px;
+}
+.sauce li {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 73px;
+    filter: alpha(Opacity=50);
+    opacity: 0.5;
+}
+div.sauce > ul > li.active{
+    filter: alpha(Opacity=100);
+    opacity: 1;
+}
+#garlick {
+    background-image: url(img/garlik.png);
+}
+#ranch {
+    background-image: url(img/ranch.png);
+}
+#salsa {
+    background-image: url(img/salsa.png);
+}
+#barbecue {
+    background-image: url(img/bbq.png);
+}
+.constructor {
+    width: 100%;
+    height: 400px;
+    position: inherit;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    
+}
+.sideComprises{
+    border-right: 1px solid #dedede;
+    width: 50%;
+    margin-top: 2%;
+}
+.sideComprises ul li {
+    display: block;
+    height: 112px;
+    width: 60px;
+    background-color: white;
+    margin-top: 10px;
+    float: left;
+    margin-left: 42px;
+}
+.sideComprises .img-item {
+    display: block;
+    width: 100%;
+    background-color: white;
+    
+}
+.sideComprises .img-item img {
+  display: block;
+    width: 60px;
+    height: 60px;
+     
+}
+
+.sideIngredients, .sideComprises{
+    padding-left: 15px;
+    margin-top: 2%;
+/*    display: table-cell;*/
+    width: 482px;
+    
+}
+.sideIngredients .ingredients {
+    width: 457px;
+    height: 300px;
+    margin-top: 2%;
+}
+.sideIngredients .ingredients li{
+    background: url(img/addit-types.png);
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 41px;
+    display: block;
+    float: left;
+    margin-left: 43px;
+    
+}
+.sideIngredients .ingredients li.fish {
+    background-position: -100px 0px;
+}
+.sideIngredients .ingredients li.fish:hover {
+    background-position: -100px -40px;
+}
+.sideIngredients .ingredients li.meat {
+    background-position: -50px 0px;
+}
+.sideIngredients .ingredients li.meat:hover {
+    background-position: -50px -40px;
+}
+.sideIngredients .ingredients li.vegetables {
+    background-position: -247px 0px;
+}
+.sideIngredients .ingredients li.vegetables:hover {
+    background-position: -247px -42px;
+}
+.sideIngredients .ingredients li.cheese {
+    background-position: -197px 0px;
+} 
+.sideIngredients .ingredients li.cheese:hover {
+    background-position: -196px -40px;
+} 
+.sideIngredients .ingredients li.fill {
+    background-position: -345px 0px;
+} 
+.sideIngredients .ingredients li.fill:hover {
+    background-position: -345px -42px;
+} 
+.tabs__content {
+  display: none; 
+}
+.tabs__content.active {
+  display: block; 
+}
+.tabs__content.active ul li {
+    display: block;
+    height: 112px;
+    width: 60px;
+    background-color: white;
+    margin-top: 10px;
+}
+.tabs__content.active .img-item {
+    display: block;
+    width: 100%;
+    background-color: white;
+    
+}
+.tabs__content.active .img-item img {
+  display: block;
+    width: 60px;
+    height: 60px;
+}
+
+
+.name-item span {
+    display: block;
+    position: relative;
+    width: 100%;
+    background-color: white;
+    font-size: 12px;
+    text-align: center;
+}
+.cost-item span {
+    display: block;
+    position: relative;
+    color: gray;
+    background-color: white;
+    font-size: 11px;
+    text-align: center; 
+}
+.order {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+   
+}
+button {
+    background-color: #ff8900;
+    color: #fff;
+    position: absolute;
+    font-weight: 600;
+    font-size: 18px;
+    width: 140px;
+    height: 35px;
+    margin: 1.3% 84%;
+    border-radius: 4px;
+    border: none; 
+}
+.order span {
+    position: absolute;
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+.order > b:nth-child(2) {
+    position: absolute;
+    margin-left: 65%;
+    margin-top: 22px;
+}
+.order > b:nth-child(4) {
+    position: absolute;
+    margin-left: 77%;
+    margin-top: 22px;
+}
+#itemOrderCost {
+    margin-left: 60%;
+}
+#orderAlert {
+    margin-left: 10%;
+    margin-top: 21px;
+    color: red;
+    font-size: 18px;
+    display: none;
+}
+#itemOrderWeight {
+    margin-left: 71%;
+}
+.clear{
+    clear: both;
+    border-bottom: 1.3px solid #868181;;
+}
+#orderAlert > b {
+    display: inline;
+}
+.cnstr-item-photo{
+    width: 28%;
+    position: absolute;
+    top: 104px;
+    left: 247px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

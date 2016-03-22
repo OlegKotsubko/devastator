@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пица конструкор</title>
+    <script src="jquery-2.2.0.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="wrap">
+            <div class="imgPizza">
+                <img src="img/Custom_Pizza_3.jpg" alt="pizza">
+<!--                <img src="img/squidLayer.png" alt="layer" class="cnstr-item-photo">-->
+            </div>
+            <div class="mainMenu">
+                <div class="header"><h1>Пицца "Сделай сам"</h1></div>
+                <div class="dough">
+                    <span>Тесто:</span>
+                    <span class="doughPrint"><b>Американо</b></span>
+                    <img src="img/item-americano.png" alt="Американо" class="active">
+                    <img src="img/item-italano.png" alt="Итальяно">
+                </div>
+                <div class="size">
+                   <span>Размер:</span>
+                   <span class="sizePrint"><b></b></span>
+                    <ul>
+                        <li class="xxl"></li>
+                        <li class="xl active"></li>
+                        <li class="x"></li>
+                    </ul>
+                </div>
+                <div class="sauce">
+                   <span>Соус:</span>
+                   <span class="sousePrint"><b>Гарлик</b></span>
+                    <ul>
+                        <li id="garlick" data-name='Гарлик' class="active"></li>
+                        <li id="ranch" data-name='Ранч'></li>
+                        <li id="salsa" data-name='Сальса'></li>
+                        <li id="barbecue" data-name='Барбекю'></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="constructor">
+            <div class="sideComprises"  id="left">
+                <h4>Ваша пица состоит из</h4>
+                <ul>
+                
+                </ul>
+            </div>
+            <div class="sideIngredients">
+               <h4>начинка</h4>
+                <div class="ingredients tabs"  >
+                   <ul class="tabs__caption">
+                       <li class="fish active"></li>
+                       <li class="meat "></li>
+                       <li class="vegetables " ></li>
+                       <li class="cheese "></li>
+                       <li class="fill "></li>
+                   </ul>
+                    <div class="tabs__content active right" >
+                        <ul>
+                          <span>
+                               <li>
+                                   <div class="img-item">
+                                     <img src="img/0ed54f93d4fd2757db8f3d819b028db8.jpg" alt="Кальмары" data-x="14" data-w-x="35" data-xl="22" data-w-xl="70" data-xxl="28" data-w-xxl="105" name="squid">
+                                   </div>
+                                   <div class="name-item">
+                                       <span></span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>72 гр /</span>
+                                       <span>22 грн</span>
+                                   </div>
+                               </li>
+                          </span>
+                          <span>
+                               <li>
+                                   <div class="img-item">
+                                     <img src="img/54c7abb4dd2df47f816b36f40985e9e0.jpg" alt="Креветки" data-x="32" data-w-x="35" data-xl="42" data-w-xl="70" data-xxl="52" data-w-xxl="105" name="shimp">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Креветки</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>70 гр /</span>
+                                       <span>42 грн</span>
+                                   </div>
+                               </li>
+                          </span>
+                          <span>
+                           <li>
+                               <div class="img-item">
+                                 <img src="img/91d3e3aea68acb69e40ad5640908ced1.jpg" alt="Мидии" data-x="20" data-w-x="35" data-xl="30" data-w-xl="70" data-xxl="42" data-w-xxl="105" name="mussels">
+                               </div>
+                               <div class="name-item">
+                                   <span>Мидии</span>
+                               </div>
+                               <div class="cost-item">
+                                   <span>70 гр /</span>
+                                   <span>30 грн</span>
+                               </div>
+                           </li>
+                           </span>
+                           <span>
+                           <li>
+                               <div class="img-item">
+                                 <img src="img/d35d9e851329196144a68d4d12a59f93.jpg" alt="Сёмга" data-x="32" data-w-x="40" data-xl="42" data-w-xl="80" data-xxl="52" data-w-xxl="120" name="salmon">
+                               </div>
+                               <div class="name-item">
+                                   <span>Сёмга</span>
+                               </div>
+                               <div class="cost-item">
+                                   <span>80 гр /</span>
+                                   <span>42 грн</span>
+                               </div>
+                           </li>
+                           </span>
+                           <span>
+                           <li>
+                               <div class="img-item">
+                                   <img src="img/dbfad6420843c9bfb1882d12b0af2c0d.jpg" alt="Крабовое мясо" data-x="14" data-w-x="20" data-xl="22" data-w-xl="30" data-xxl="28" data-w-xxl="40" name="crabmeat">
+                               </div>
+                               <div class="name-item">
+                                   <span>Крабовое мясо</span>
+                               </div>
+                               <div class="cost-item">
+                                   <span>30 гр /</span>
+                                   <span>22 грн</span>
+                               </div>
+                           </li>
+                           </span>
+                           <span>
+                           <li>
+                               <div class="img-item">
+                                   <img src="img/545d93dab68c77f64d824897e99bb718.jpg" alt="Тунец" data-x="20" data-w-x="30" data-xl="30" data-w-xl="50" data-xxl="42" data-w-xxl="75" name="tuna">
+                               </div>
+                               <div class="name-item">
+                                   <span>Тунец</span>
+                               </div>
+                               <div class="cost-item">
+                                   <span>50 гр /</span>
+                                   <span>30 грн</span>
+                               </div>
+                            </li>
+                            </span>
+                       </ul>
+                    </div>
+                    <div class="tabs__content right">
+                       <ul>
+                          <span>
+                           <li>
+                               <div class="img-item">
+                                 <img src="img/ddac6d8417739a2dcaf95ba32f5a8efe.png" alt="Бекон" data-x="12" data-w-x="35" data-xl="18" data-w-xl="70" data-xxl="25" data-w-xxl="105" name="becon">
+                               </div>
+                               <div class="name-item">
+                                   <span>Бекон</span>
+                               </div>
+                               <div class="cost-item">
+                                   <span>70 гр /</span>
+                                   <span>18 грн</span>
+                               </div>
+                           </li>
+                           </span>
+                           <span>
+                           <li>
+                               <div class="img-item">
+                                 <img src="img/39c3580b6ad4ecb63e8dd26830e57c07.jpg" alt="Ветчина" data-x="12" data-w-x="35" data-xl="18" data-w-xl="70" data-xxl="25" data-w-xxl="105" name="ham">
+                               </div>
+                               <div class="name-item">
+                                   <span>Ветчина</span>
+                               </div>
+                               <div class="cost-item">
+                                   <span>70 гр /</span>
+                                   <span>18 грн</span>
+                               </div>
+                           </li>
+                           </span>
+                           <span>
+                           <li>
+                               <div class="img-item">
+                                 <img src="img/4b062dffc455e19fd1b3ba63752446ea.png" alt="Итальянские колбаски" data-x="12" data-w-x="35" data-xl="18" data-w-xl="70" data-xxl="25" data-w-xxl="105" name="Italian sausages">
+                               </div>
+                               <div class="name-item">
+                                   <span>Итальянские колбаски</span>
+                               </div>
+                               <div class="cost-item">
+                                   <span>70 гр /</span>
+                                   <span>18 грн</span>
+                               </div>
+                           </li>
+                           </span>
+                           <span>
+                           <li>
+                               <div class="img-item">
+                                 <img src="img/82e2ed56017b68dc8aa1eda28cb74a0c.png" alt="Копчёная курица" data-x="12" data-w-x="35" data-xl="18" data-w-xl="70" data-xxl="25" data-w-xxl="105" name="smoked chicken">
+                               </div>
+                               <div class="name-item">
+                                   <span>Копчёная курица</span>
+                               </div>
+                               <div class="cost-item">
+                                   <span>70 гр /</span>
+                                   <span>18 грн</span>
+                               </div>
+                           </li>
+                           </span>
+                           <span>
+                           <li>
+                               <div class="img-item">
+                                   <img src="img/c18695784dd9470d7a249ee547e66156.png" alt="Курица гриль" data-x="12" data-w-x="40" data-xl="18" data-w-xl="80" data-xxl="25" data-w-xxl="120" name="chicken grill">
+                               </div>
+                               <div class="name-item">
+                                   <span>Курица гриль</span>
+                               </div>
+                               <div class="cost-item">
+                                   <span>80 гр /</span>
+                                   <span>18 грн</span>
+                               </div>
+                           </li>
+                           </span>
+                           <span>
+                           <li>
+                               <div class="img-item">
+                                   <img src="img/de2d8e21946959e30c3dd449543942b5.jpg" alt="Венские колбаски" data-x="12" data-w-x="30" data-xl="18" data-w-xl="60" data-xxl="25" data-w-xxl="90" name="Vienna sausages">
+                               </div>
+                               <div class="name-item">
+                                   <span>Венские колбаски</span>
+                               </div>
+                               <div class="cost-item">
+                                   <span>60 гр /</span>
+                                   <span>18 грн</span>
+                               </div>
+                            </li>
+                            </span>
+                            <span>
+                            <li>
+                               <div class="img-item">
+                                   <img src="img/d63185a7cb4e03f5db494e663453ecc5.jpg" alt="Баварские колбаски" data-x="12" data-w-x="30" data-xl="18" data-w-xl="60" data-xxl="25" data-w-xxl="90" name="Bavarian sausages">
+                               </div>
+                               <div class="name-item">
+                                   <span>Баварские колбаски</span>
+                               </div>
+                               <div class="cost-item">
+                                   <span>60 гр /</span>
+                                   <span>18 грн</span>
+                               </div>
+                            </li>
+                            </span>
+                       </ul>
+                       
+                    </div>
+                    <div class="tabs__content right">
+                        <ul>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/kunzjutBortik.jpg" alt="Кунжутный бортик" data-x="5" data-w-x="8" data-xl="6" data-w-xl="10" data-xxl="7" data-w-xxl="12" name="sesame rim">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Кунжутный бортик</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>12 гр /</span>
+                                       <span>7 грн</span>
+                                   </div>
+                                </li>
+                            </span> 
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/oregano.jpg" alt="Орегано" data-x="5" data-w-x="1" data-xl="6" data-w-xl="2" data-xxl="7" data-w-xxl="3" name="oregano">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Орегано</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>3 гр /</span>
+                                       <span>7 грн</span>
+                                   </div>
+                                </li>
+                            </span>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/pepperHalapenio.jpg" alt="Перчик Халапеньйо"  data-x="5" data-w-x="10" data-xl="6" data-w-xl="16" data-xxl="7" data-w-xxl="22" name="jalape">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Перчик Халапеньо</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>22 гр /</span>
+                                       <span>7 грн</span>
+                                   </div>
+                                </li>
+                            </span>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/petrush.jpg" alt="Петрушка" data-x="5" data-w-x="4" data-xl="6" data-w-xl="5" data-xxl="7" data-w-xxl="7" name="parsley">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Петрушка</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>7 гр /</span>
+                                       <span>7 грн</span>
+                                   </div>
+                                </li>
+                            </span>
+                               
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/ananas.jpg" alt="Ананас" data-x="8" data-w-x="40" data-xl="14" data-w-xl="80" data-xxl="20" data-w-xxl="120" name="pineapple">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Ананас</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>120 гр /</span>
+                                       <span>20 грн</span>
+                                   </div>
+                                </li>
+                            </span>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/corn.jpg" alt="Кукуруза" data-x="8" data-w-x="30" data-xl="14" data-w-xl="50" data-xxl="20" data-w-xxl="75" name="corn">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Кукуруза</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>75 гр /</span>
+                                       <span>20 грн</span>
+                                   </div>
+                                </li>
+                            </span>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/onjon.jpg" alt="Лук" data-x="8" data-w-x="30" data-xl="14" data-w-xl="50" data-xxl="20" data-w-xxl="75" name="onion">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Лук</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>75 гр /</span>
+                                       <span>20 грн</span>
+                                   </div>
+                                </li>
+                            </span>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/maslini.jpg" alt="Маслины" data-x="8" data-w-x="30" data-xl="14" data-w-xl="50" data-xxl="20" data-w-xxl="75" name="olives">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Маслины</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>75 гр /</span>
+                                       <span>20 грн</span>
+                                   </div>
+                                </li>
+                            </span>
+<!--
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/ogurMarinov.jpg" alt="Огурец маринованный">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Огурец маринованный</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>105 гр /</span>
+                                       <span>20 грн</span>
+                                   </div>
+                                </li>
+                            </span> 
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/olivki.jpg" alt="Оливки">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Оливки</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span>90 гр /</span>
+                                       <span>20 грн</span>
+                                   </div>
+                                </li>
+                            </span> 
+-->
+                        </ul>
+                    </div>
+                    <div class="tabs__content right">
+                        <ul>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/cheezDorBlue.jpg" alt="Дор Блю" data-x="13" data-w-x="25" data-xl="21" data-w-xl="50" data-xxl="29" data-w-xxl="75">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Дор Блю</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span> /</span>
+                                       <span> </span>
+                                   </div>
+                                </li>
+                            </span>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/mocarella.jpg" alt="Моцарелла" data-x="13" data-w-x="50" data-xl="21" data-w-xl="100" data-xxl="29" data-w-xxl="150">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Моцарелла</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span> /</span>
+                                       <span> </span>
+                                   </div>
+                                </li>
+                            </span>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/cheezParmizan.jpg" alt="Пармезан" data-x="13" data-w-x="25" data-xl="21" data-w-xl="50" data-xxl="29" data-w-xxl="75">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Пармезан</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span> /</span>
+                                       <span> </span>
+                                   </div>
+                                </li>
+                            </span>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/cheezFeta.jpg" alt="Фета" data-x="13" data-w-x="25" data-xl="21" data-w-xl="50" data-xxl="29" data-w-xxl="75">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Фета</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span> /</span>
+                                       <span> </span>
+                                   </div>
+                                </li>
+                            </span>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/cheezFiladelfia.jpg" alt="Филадельфия сыр" data-x="13" data-w-x="25" data-xl="21" data-w-xl="40" data-xxl="29" data-w-xxl="60">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Филадельфия сыр</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span> /</span>
+                                       <span> </span>
+                                   </div>
+                                </li>
+                            </span>
+                               
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/cheezChedder.jpg" alt="Чеддер" data-x="13" data-w-x="50" data-xl="21" data-w-xl="100" data-xxl="29" data-w-xxl="150">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Чеддер</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span> /</span>
+                                       <span> </span>
+                                   </div>
+                                </li>
+                            </span>
+                            
+                        </ul>
+                    </div>
+                    <div class="tabs__content right">
+                        <ul>
+                            <span>
+                                <li>
+                                   <div class="img-item">
+                                       <img src="img/barbequ.png" alt="Барбекю" data-x="8" data-w-x="20" data-xl="10" data-w-xl="30" data-xxl="14" data-w-xxl="40" name="barbeq">
+                                   </div>
+                                   <div class="name-item">
+                                       <span>Барбекю</span>
+                                   </div>
+                                   <div class="cost-item">
+                                       <span> /</span>
+                                       <span> </span>
+                                   </div>
+                                </li>
+                            </span>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="order">
+           <span id="itemOrderCost">40</span><b>грн.</b>
+           <span id="itemOrderWeight">470</span><b>гр.</b>
+           <span id="orderAlert">Пицца не может превышать <b>1 кг.</b> </span>
+           
+           
+            <button>В корзину</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
